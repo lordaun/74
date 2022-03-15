@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.box {
+			background-color: red;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 1500px;
+			top: 850px;
+			transition: 1.5s;
+		}
+		.box1 {
+			background-color: green;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 1650px;
+			top: 700px;
+			transition: 1.5s;
+		}
+		.box2 {
+			background-color: blue;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 1500px;
+			top: 700px;
+			transition: 1.5s;
+		}
+		.box3 {
+			background-color: yellow;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 1500px;
+			top: 850px;
+			transition: 1.5s;
+		}
+		.box4 {
+			background-color: limegreen;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 1650px;
+			top: 1000px;
+			transition: 1.5s;
+		}
+		.box5 {
+			background-color: gray;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 1650px;
+			top: 1000px;
+			transition: 1.5s;
+		}
+	</style>
+</head>
+<body>
+	<h1 style=" color: orange;">Score: <span class="score">0</span></h1>
+	<div style="" class="box"></div>
+	<div style="" class="box1"></div>
+	<div style="" class="box2"></div>
+	<div style="" class="box3"></div>
+	<div style="" class="box4"></div>
+	<div style="" class="box5"></div>
+<script type="text/javascript">
+	let box = document.querySelector('.box');
+	let box1 = document.querySelector('.box1');
+	let box2 = document.querySelector('.box2');
+	let box3 = document.querySelector('.box3');
+	let box4 = document.querySelector('.box4');
+	let box5 = document.querySelector('.box5');
+	let left = 1500;
+	let left1 = 1650;
+	let left2 = 1500;
+	let left3 = 1650;
+	let left4 = 1500;
+	let left5 = 1650;
+	let gop = 800;
+	let gop1 = 700;
+	let gop2 = 800;
+	let gop3 = 700;
+	let gop4 = 800;
+	let gop5 = 700;
+	let scr;
+	scr=0;
+
+	let moveBox = function(){
+		left = left - 50;
+		gop = gop - 10;
+		console.log(left)
+		console.log(gop)
+		box.style.left = left + "px"
+		box.style.top = gop + "px"
+	}
+
+	let moveBox1 = function(){
+		left1 = left1 + 50;
+		gop1 = gop1 - 10;
+		console.log(left1);
+		console.log(gop1)
+		box1.style.left = left1 + "px"
+		box1.style.top = gop1 + "px"
+	}
+	let moveBox2 = function(){
+		left2 = left2 - 50;
+		gop2 = gop2 + 10;
+		console.log(left2);
+		console.log(gop2)
+		box2.style.left = left2 + "px"
+		box2.style.top = gop2 + "px"
+	}
+	let moveBox3 = function(){
+		left3 = left3 + 10;
+		gop3 = gop3 + 50;
+		console.log(left3);
+		console.log(gop3)
+		box3.style.left = left3 + "px"
+		box3.style.top = gop3 + "px"
+	}
+	let moveBox4 = function(){
+		left4 = left4 - 10;
+		gop4 = gop4 - 50;
+		console.log(left4);
+		console.log(gop4)
+		box4.style.left = left4 + "px"
+		box4.style.top = gop4 + "px"
+	}
+	let moveBox5 = function(){
+		left5 = left5 + 10;
+		gop5 = gop5 - 50;
+		console.log(left5);
+		console.log(gop5)
+		box5.style.left = left5 + "px"
+		box5.style.top = gop5 + "px"
+	}
+	let end = function(){
+		alert('You lose!')
+	}
+
+	setInterval(moveBox,200);
+	setInterval(moveBox1,300);
+	setInterval(moveBox2,250);
+	setInterval(moveBox3,150);
+	setInterval(moveBox4,100);
+	setInterval(moveBox5,350);
+
+	box.onclick = function(){
+		scr = scr + 1;
+		document.querySelector('.score').innerHTML = scr;
+		box.style.display = "none";
+		if(scr==6){
+			alert('winner');
+		}
+	}
+	box1.onclick = function(){
+		scr = scr + 1;
+		document.querySelector('.score').innerHTML = scr;
+		box1.style.display = "none";
+		if(scr==6){
+			alert('winner');
+		}
+	}
+	box2.onclick = function(){
+		scr = scr + 1;
+		document.querySelector('.score').innerHTML = scr;
+		box2.style.display = "none";
+		if(scr==6){
+			alert('winner');
+		}
+	}
+	box3.onclick = function(){
+		scr = scr + 1;
+		document.querySelector('.score').innerHTML = scr;
+		box3.style.display = "none";
+		if(scr==6){
+			alert('winner');
+		}
+	}
+	box4.onclick = function(){
+		scr = scr + 1;
+		document.querySelector('.score').innerHTML = scr;
+		box4.style.display = "none";
+		if(scr==6){
+			alert('winner');
+		}
+	}
+	box5.onclick = function(){
+		scr = scr + 1;
+		document.querySelector('.score').innerHTML = scr;
+		box5.style.display = "none";
+		if(scr==6){
+			alert('winner');
+		}
+	}
+
+	setTimeout(end, 5000);
+</script>
+</body>
+</html>
